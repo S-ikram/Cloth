@@ -1,0 +1,72 @@
+
+
+.navbar {
+  background-color: rgb(0, 0, 0);
+}
+.carousel-item {
+    background-image: url(main-3.jpg);
+    background-size: cover;
+    height: 700px;
+}
+.carousel-item:nth-child(2) {
+    background-image: url(main-two.webp);
+    background-size: cover;
+    height: 700px;
+
+}
+.carousel-item:nth-child(3) {
+    background-image: url(main.webp);
+    background-size: cover;
+    height: 700px;
+
+}
+
+.about-right-btn {
+    --color: rgb(255, 123, 0);
+    background-color: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+  }
+  .about-right-btn::before,
+  .about-right-btn::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+  .about-right-btn::before {
+    top: -1em;
+    left: -1em;
+  }
+  .about-right-btn::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+  .about-right-btn:hover::before,
+  .about-right-btn:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+  .about-right-btn:hover {
+    color: rgb(10, 25, 30);
+    box-shadow: 0 0 20px rgb(206, 107, 8);
+  }
+  .about-right-btn:active {
+    filter: brightness(0.8);
+  }
